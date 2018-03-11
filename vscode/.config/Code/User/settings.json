@@ -1,0 +1,28 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "workbench.iconTheme": "vscode-icons",
+    "editor.fontSize": 17,
+    "editor.fontFamily": "'Ubuntu mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "explorer.confirmDragAndDrop": false,
+    "editor.rulers": [
+        80
+    ],
+    "C_Cpp.autocomplete": "Disabled",
+    "editor.autoClosingBrackets": false,
+    "window.zoomLevel": 0,
+    "bracketPairColorizer.consecutivePairColors": [
+        "()",
+        "[]",
+        "{}",
+        [
+            "Gold",
+            "LightSkyBlue",
+            "LightSalmon",
+            "MediumSpringGreen",
+            "Orchid"
+        ],
+        "Red"
+    ],
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderWhitespace": "none"
+}

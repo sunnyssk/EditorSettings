@@ -1,0 +1,37 @@
+
+;; ----- smex-history -----
+(
+ delete-file
+ mc/edit-lines
+ undo
+ hs-minor-mode
+ sml/customize
+ list-buffers
+ view-buffer
+)
+
+;; ----- smex-data -----
+(
+ (load-file . 7)
+ (sml/apply-theme . 1)
+ (fci-mode . 6)
+ (company-mode . 2)
+ (list-directory . 1)
+ (package-list-packages . 2)
+ (describe-key . 12)
+ (buffer-menu . 3)
+ (Buffer-menu-delete . 2)
+ (select-frame . 1)
+ (yas-visit-snippet-file . 2)
+ (backtrace . 1)
+ (goto-line . 1)
+ (undo . 2)
+ (sml/customize . 6)
+ (help . 1)
+ (help-with-tutorial . 1)
+ (view-buffer . 2)
+ (list-buffers . 2)
+ (hs-minor-mode . 3)
+ (mc/edit-lines . 2)
+ (delete-file . 1)
+)
