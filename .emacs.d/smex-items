@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- delete-file
+ rainbow-delimiters-mode
+ c++-mode
  mc/edit-lines
+ delete-file
  undo
  hs-minor-mode
  sml/customize
- list-buffers
- view-buffer
 )
 
 ;; ----- smex-data -----
@@ -32,6 +32,8 @@
  (view-buffer . 2)
  (list-buffers . 2)
  (hs-minor-mode . 3)
- (mc/edit-lines . 2)
+ (mc/edit-lines . 5)
  (delete-file . 1)
+ (c++-mode . 1)
+ (rainbow-delimiters-mode . 1)
 )

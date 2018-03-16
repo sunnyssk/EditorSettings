@@ -37,6 +37,10 @@
 (global-hl-line-mode 1)
 (set-face-background 'hl-line "#000000")
 
+;; ---- Highlight brackets -----------------------------------------------------
+(show-paren-mode 1)
+(setq show-paren-style 'parenthesis)
+
 ;; ---- Change indentation width -----------------------------------------------
 (setq-default c-basic-offset 4
               tab-width 4
@@ -115,25 +119,26 @@
 ;; ---- Set up package list for auto installation ------------------------------
 (require 'cl)    ;; Call for common lisp extension
 (defvar my/packages '(
-		      ;; ---- Auto-completion --------
+              ;; ---- Auto-completion --------
               company                     ;; Auto complete
-		      ;; ---- Editor Improvment ------
+              ;; ---- Editor Improvment ------
               multiple-cursors            ;; Multiple cursors
               neotree                     ;; File tree
               smex                        ;; Mini-buffer improvement
               tabbar                      ;; Tabs of buffers
               yasnippet                   ;; Snippets
-		      ;; ---- Major Modes ------------
+              ;; ---- Major Modes ------------
               cuda-mode
               js2-mode
               markdown-mode
               ;; ---- Minor Modes ------------
               ;; fill-column-indicator    ;; Known conflict with company
-		      ;; ---- Themes -----------------
+              ;; ---- Themes -----------------
+              hlinum                      ;; Highlight current line number
               monokai-theme
               powerline                   ;; (dependent for smart-mode-line)
+              rainbow-delimiters          ;; Parenthesis coloring
               smart-mode-line             ;; Mode line beautify
-              hlinum                      ;; Highlight current line number
               ) "Default packages")
 (setq package-selected-packages my/packages)
 (defun my/packages-installed-p()
@@ -189,25 +194,8 @@
 (require 'neotree)
 (global-set-key (kbd "<f8>") 'neotree-toggle)
 
-;; ---- [ POWERLINE ] Turn on powerline for emacs ------------------------------
-;;(require 'powerline)
-;; In order to make powerline seperators available user patched fonts for
-;; powerline on github 
-;;(powerline-default-theme)
-
-;; ---- [ AIRLINE-THEMES ] (dependent: POWERLINE) Enable powerline themes ------
-;;(require 'airline-themes)
-;;(load-theme 'airline-kolor t)
-
-;;(setq powerline-utf-8-separator-left       #xe0b0
-;;      powerline-utf-8-separator-right      #xe0b2
-;;      airline-utf-glyph-separator-left     #xe0b0
-;;      airline-utf-glyph-separator-right    #xe0b2
-;;      airline-utf-glyph-subseparator-left  #xe0b1
-;;      airline-utf-glyph-subseparator-right #xe0b3
-;;      airline-utf-glyph-branch             #xe0a0
-;;      airline-utf-glyph-readonly           #xe0a2
-;;      airline-utf-glyph-linenumber         #xe0a1)
+;; ---- [ RAINBOW-DELIMITERS ] -------------------------------------------------
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
 ;; ---- [ SMART-MODE-LINE ] ----------------------------------------------------
 (setq column-number-mode 1)
